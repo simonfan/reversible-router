@@ -1,0 +1,142 @@
+{
+    "project": {
+        "name": "archetypo-router",
+        "version": "0.0.0"
+    },
+    "files": {
+        "src/__archetypo-router/format.js": {
+            "name": "src/__archetypo-router/format.js",
+            "modules": {
+                "view": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/index.js": {
+            "name": "src/index.js",
+            "modules": {
+                "archetypo-router": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "archetypo": {
+            "name": "archetypo",
+            "submodules": {
+                "view": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "view": {
+            "name": "view",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "archetypo",
+            "namespace": "",
+            "file": "src/__archetypo-router/format.js",
+            "line": 1
+        },
+        "archetypo-router": {
+            "name": "archetypo-router",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/index.js",
+            "line": 5
+        }
+    },
+    "classes": {},
+    "classitems": [
+        {
+            "file": "src/__archetypo-router/format.js",
+            "line": 18,
+            "description": "Removes all weird tokens from the raw string and returns the key\nto be used when looking for the correspondant value.",
+            "itemtype": "method",
+            "name": "getKey",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "",
+            "module": "archetypo",
+            "submodule": "view"
+        },
+        {
+            "file": "src/__archetypo-router/format.js",
+            "line": 30,
+            "description": "Formats the data into the given route string.",
+            "itemtype": "method",
+            "name": "format",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "route",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "archetypo",
+            "submodule": "view"
+        },
+        {
+            "file": "src/index.js",
+            "line": 33,
+            "description": "Intercepts calls for the route method, so that\nwe can save the route strings to a formats hash for navigation use.",
+            "itemtype": "method",
+            "name": "route",
+            "class": "",
+            "module": "archetypo-router"
+        },
+        {
+            "file": "src/index.js",
+            "line": 50,
+            "description": "Intercepts the original navigate method,\nso that the router automatically takes advantage\nof format methods.",
+            "itemtype": "method",
+            "name": "navigate",
+            "params": [
+                {
+                    "name": "route|format",
+                    "description": "",
+                    "type": "String|Object"
+                },
+                {
+                    "name": "data|options",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "class": "",
+            "module": "archetypo-router"
+        }
+    ],
+    "warnings": []
+}

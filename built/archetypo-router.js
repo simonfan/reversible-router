@@ -1,0 +1,5 @@
+//     ArchetypoRouter
+//     (c) simonfan
+//     ArchetypoRouter is licensed under the MIT terms.
+
+define("__archetypo-router/format",["require","exports","module","lodash"],function(r,t,e){function o(r){return r.replace(/(\(|\(.*:|:|\)|\*)/,"")}var a=(r("lodash"),/\((.*?)\)/g),n=/(\(\?)?:\w+/g,i=/\*\w+/g;e.exports=function(r,t){return r=r.replace(n,function(r){var e=o(r);return t[e]?t[e]:r}),r=r.replace(i,function(r){var e=o(r);return t[e]?t[e]:""}),r.replace(a,"")}}),define("archetypo-router",["require","exports","module","lodash","lowercase-backbone","./__archetypo-router/format"],function(r,t,e){{var o=r("lodash"),a=r("lowercase-backbone").router,n=r("./__archetypo-router/format");e.exports=a.extend({initialize:function(){this.initializeArchRouter.apply(this,arguments)},initializeArchRouter:function(){this.routeFormats={}},route:function(r,t){return o.isString(t)&&(this.routeFormats[t]=r),a.prototype.route.apply(this,arguments)},navigate:function(r,t,e){var o=this.routeFormats[r];if(o){var i=n(o,t);return a.prototype.navigate.call(this,i,e)}return a.prototype.navigate.apply(this,arguments)}})}});
