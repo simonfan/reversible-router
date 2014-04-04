@@ -1,18 +1,23 @@
+//     ArchetypoRouter
+//     (c) simonfan
+//     ArchetypoRouter is licensed under the MIT terms.
+
 /**
- * @module archetypo
- * @submodule view
+ * @module archetypo-router
  */
 
-define('__archetypo-router/format',['require','exports','module','lodash'],function (require, exports, module) {
+define('archetypo-router',['require','exports','module','lodash','lowercase-backbone'],function (require, exports, module) {
 	
 
-	var _ = require('lodash');
-
+	var _ = require('lodash'),
+		router = require('lowercase-backbone').router;
 
 	var optionalParam = /\((.*?)\)/g,
 		namedParam    = /(\(\?)?:\w+/g,
 		splatParam    = /\*\w+/g,
 		escapeRegExp  = /[\-{}\[\]+?.,\\\^$|#\s]/g;
+
+
 
 
 	/**
@@ -30,12 +35,12 @@ define('__archetypo-router/format',['require','exports','module','lodash'],funct
 	/**
 	 * Formats the data into the given route string.
 	 *
-	 * @method format
+	 * @method formatRoute
 	 * @private
 	 * @param route {String}
 	 * @param data {Object}
 	 */
-	module.exports = function format(route, data) {
+	function formatRoute(route, data) {
 
 		// place named data
 		route = route.replace(namedParam, function (match) {
@@ -55,30 +60,14 @@ define('__archetypo-router/format',['require','exports','module','lodash'],funct
 		// remove optionals that were not used.
 		return route.replace(optionalParam, '');
 	};
-});
-
-//     ArchetypoRouter
-//     (c) simonfan
-//     ArchetypoRouter is licensed under the MIT terms.
-
-/**
- * @module archetypo-router
- */
-
-define('archetypo-router',['require','exports','module','lodash','lowercase-backbone','./__archetypo-router/format'],function (require, exports, module) {
-	
-
-	var _ = require('lodash'),
-		router = require('lowercase-backbone').router;
-
-	var formatRoute = require('./__archetypo-router/format');
 
 
-	var optionalParam = /\((.*?)\)/g,
-		namedParam    = /(\(\?)?:\w+/g,
-		splatParam    = /\*\w+/g,
-		escapeRegExp  = /[\-{}\[\]+?.,\\\^$|#\s]/g;
-
+	/**
+	 *
+	 * The arch router builder.
+	 *
+	 *
+	 */
 	var archRouter = module.exports = router.extend({
 		initialize: function initialize() {
 			this.initializeArchRouter.apply(this, arguments);

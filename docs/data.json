@@ -4,15 +4,6 @@
         "version": "0.0.0"
     },
     "files": {
-        "src/__archetypo-router/format.js": {
-            "name": "src/__archetypo-router/format.js",
-            "modules": {
-                "view": 1
-            },
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
         "src/index.js": {
             "name": "src/index.js",
             "modules": {
@@ -24,27 +15,6 @@
         }
     },
     "modules": {
-        "archetypo": {
-            "name": "archetypo",
-            "submodules": {
-                "view": 1
-            },
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "view": {
-            "name": "view",
-            "submodules": {},
-            "classes": {},
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "archetypo",
-            "namespace": "",
-            "file": "src/__archetypo-router/format.js",
-            "line": 1
-        },
         "archetypo-router": {
             "name": "archetypo-router",
             "submodules": {},
@@ -59,8 +29,8 @@
     "classes": {},
     "classitems": [
         {
-            "file": "src/__archetypo-router/format.js",
-            "line": 18,
+            "file": "src/index.js",
+            "line": 23,
             "description": "Removes all weird tokens from the raw string and returns the key\nto be used when looking for the correspondant value.",
             "itemtype": "method",
             "name": "getKey",
@@ -74,15 +44,14 @@
                 }
             ],
             "class": "",
-            "module": "archetypo",
-            "submodule": "view"
+            "module": "archetypo-router"
         },
         {
-            "file": "src/__archetypo-router/format.js",
-            "line": 30,
+            "file": "src/index.js",
+            "line": 35,
             "description": "Formats the data into the given route string.",
             "itemtype": "method",
-            "name": "format",
+            "name": "formatRoute",
             "access": "private",
             "tagname": "",
             "params": [
@@ -98,12 +67,18 @@
                 }
             ],
             "class": "",
-            "module": "archetypo",
-            "submodule": "view"
+            "module": "archetypo-router"
         },
         {
             "file": "src/index.js",
-            "line": 33,
+            "line": 65,
+            "description": "The arch router builder.",
+            "class": "",
+            "module": "archetypo-router"
+        },
+        {
+            "file": "src/index.js",
+            "line": 81,
             "description": "Intercepts calls for the route method, so that\nwe can save the route strings to a formats hash for navigation use.",
             "itemtype": "method",
             "name": "route",
@@ -112,7 +87,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 50,
+            "line": 98,
             "description": "Intercepts the original navigate method,\nso that the router automatically takes advantage\nof format methods.",
             "itemtype": "method",
             "name": "navigate",
@@ -138,5 +113,10 @@
             "module": "archetypo-router"
         }
     ],
-    "warnings": []
+    "warnings": [
+        {
+            "message": "Missing item type\nThe arch router builder.",
+            "line": " src/index.js:65"
+        }
+    ]
 }
