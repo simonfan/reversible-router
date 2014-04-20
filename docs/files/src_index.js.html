@@ -86,9 +86,9 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
-//     reversible-router
+//     reversible-rout
 //     (c) simonfan
-//     reversible-router is licensed under the MIT terms.
+//     reversible-rout is licensed under the MIT terms.
 
 /**
  * @module reversible-router
@@ -117,7 +117,7 @@ define(function (require, exports, module) {
 	 * @param str {String}
 	 */
 	function getKey(str) {
-		return str.replace(/(\(|\(.*:|:|\)|\*)/, &#x27;&#x27;);
+		return str.replace(/(\(|\(.*:|:|\)|\*)/g, &#x27;&#x27;);
 	}
 
 	/**
@@ -129,6 +129,16 @@ define(function (require, exports, module) {
 	 * @param data {Object}
 	 */
 	function formatRoute(route, data) {
+
+		// place optional named data
+		route = route.replace(optionalParam, function (match) {
+		//	console.log(&#x27;match -&gt; &#x27; + match);
+
+			var key = getKey(match);
+		//	console.log(&#x27;key -&gt; &#x27; + key);
+
+			return data[key] ? data[key] : &#x27;&#x27;;
+		});
 
 		// place named data
 		route = route.replace(namedParam, function (match) {

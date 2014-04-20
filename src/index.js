@@ -1,6 +1,6 @@
-//     reversible-router
+//     reversible-rout
 //     (c) simonfan
-//     reversible-router is licensed under the MIT terms.
+//     reversible-rout is licensed under the MIT terms.
 
 /**
  * @module reversible-router
@@ -29,7 +29,7 @@ define(function (require, exports, module) {
 	 * @param str {String}
 	 */
 	function getKey(str) {
-		return str.replace(/(\(|\(.*:|:|\)|\*)/, '');
+		return str.replace(/(\(|\(.*:|:|\)|\*)/g, '');
 	}
 
 	/**
@@ -41,6 +41,16 @@ define(function (require, exports, module) {
 	 * @param data {Object}
 	 */
 	function formatRoute(route, data) {
+
+		// place optional named data
+		route = route.replace(optionalParam, function (match) {
+		//	console.log('match -> ' + match);
+
+			var key = getKey(match);
+		//	console.log('key -> ' + key);
+
+			return data[key] ? data[key] : '';
+		});
 
 		// place named data
 		route = route.replace(namedParam, function (match) {
@@ -59,7 +69,7 @@ define(function (require, exports, module) {
 
 		// remove optionals that were not used.
 		return route.replace(optionalParam, '');
-	}
+	};
 
 
 	/**

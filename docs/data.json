@@ -71,14 +71,14 @@
         },
         {
             "file": "src/index.js",
-            "line": 65,
+            "line": 75,
             "description": "The arch router builder.",
             "class": "",
             "module": "reversible-router"
         },
         {
             "file": "src/index.js",
-            "line": 81,
+            "line": 91,
             "description": "Intercepts calls for the route method, so that\nwe can save the route strings to a formats hash for navigation use.",
             "itemtype": "method",
             "name": "route",
@@ -87,7 +87,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 98,
+            "line": 108,
             "description": "Intercepts the original navigate method,\nso that the router automatically takes advantage\nof format methods.",
             "itemtype": "method",
             "name": "navigate",
@@ -116,7 +116,7 @@
     "warnings": [
         {
             "message": "Missing item type\nThe arch router builder.",
-            "line": " src/index.js:65"
+            "line": " src/index.js:75"
         }
     ]
 }
