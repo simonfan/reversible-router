@@ -1,9 +1,9 @@
-//     ArchetypoRouter
+//     reversible-router
 //     (c) simonfan
-//     ArchetypoRouter is licensed under the MIT terms.
+//     reversible-router is licensed under the MIT terms.
 
 /**
- * @module archetypo-router
+ * @module reversible-router
  */
 
 define(function (require, exports, module) {
@@ -59,7 +59,7 @@ define(function (require, exports, module) {
 
 		// remove optionals that were not used.
 		return route.replace(optionalParam, '');
-	};
+	}
 
 
 	/**

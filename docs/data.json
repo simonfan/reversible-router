@@ -1,13 +1,13 @@
 {
     "project": {
-        "name": "archetypo-router",
+        "name": "reversible-router",
         "version": "0.0.0"
     },
     "files": {
         "src/index.js": {
             "name": "src/index.js",
             "modules": {
-                "archetypo-router": 1
+                "reversible-router": 1
             },
             "classes": {},
             "fors": {},
@@ -15,8 +15,8 @@
         }
     },
     "modules": {
-        "archetypo-router": {
-            "name": "archetypo-router",
+        "reversible-router": {
+            "name": "reversible-router",
             "submodules": {},
             "classes": {},
             "fors": {},
@@ -44,7 +44,7 @@
                 }
             ],
             "class": "",
-            "module": "archetypo-router"
+            "module": "reversible-router"
         },
         {
             "file": "src/index.js",
@@ -67,14 +67,14 @@
                 }
             ],
             "class": "",
-            "module": "archetypo-router"
+            "module": "reversible-router"
         },
         {
             "file": "src/index.js",
             "line": 65,
             "description": "The arch router builder.",
             "class": "",
-            "module": "archetypo-router"
+            "module": "reversible-router"
         },
         {
             "file": "src/index.js",
@@ -83,7 +83,7 @@
             "itemtype": "method",
             "name": "route",
             "class": "",
-            "module": "archetypo-router"
+            "module": "reversible-router"
         },
         {
             "file": "src/index.js",
@@ -110,7 +110,7 @@
                 }
             ],
             "class": "",
-            "module": "archetypo-router"
+            "module": "reversible-router"
         }
     ],
     "warnings": [

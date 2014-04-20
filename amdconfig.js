@@ -6,7 +6,7 @@ require.config({
 		text: '../bower_components/requirejs-text/text',
 		mocha: '../node_modules/mocha/mocha',
 		should: '../node_modules/should/should',
-		'archetypo-router': 'index',
+		'reversible-router': 'index',
 		backbone: '../bower_components/backbone/backbone',
 		jquery: '../bower_components/jquery/dist/jquery',
 		lodash: '../bower_components/lodash/dist/lodash.compat',

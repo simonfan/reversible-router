@@ -1,12 +1,12 @@
 {
-	"name": "archetypo-router",
+	"name": "reversible-router",
 	"main": "./src",
 	"version": "0.0.0",
 
 	"description": "Some module...",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/simonfan/archetypo-router.git"
+		"url": "https://github.com/simonfan/reversible-router.git"
 	},
 	"dependencies": {},
 	"devDependencies": {

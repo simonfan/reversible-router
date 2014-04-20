@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 
 		yuidoc: {
 			compile: {
-				name: 'archetypo-router',
+				name: 'reversible-router',
 				version: '0.0.0',
 			//	description: '',
 			// 	url: '',
@@ -89,9 +89,9 @@ module.exports = function (grunt) {
 					// (must coincide with that defined in mainConfigFile)
 					baseUrl: './src',
 					// module name
-					name: 'archetypo-router',
+					name: 'reversible-router',
 					// output here
-					out: './built/archetypo-router.js',
+					out: './built/reversible-router.js',
 					// config file
 					mainConfigFile: 'amdconfig.js',
 
@@ -120,9 +120,9 @@ module.exports = function (grunt) {
 					// (must coincide with that defined in mainConfigFile)
 					baseUrl: './src',
 					// module name
-					name: 'archetypo-router',
+					name: 'reversible-router',
 					// output here
-					out: './built/archetypo-router.dev.js',
+					out: './built/reversible-router.dev.js',
 					// config file
 					mainConfigFile: 'amdconfig.js',
 

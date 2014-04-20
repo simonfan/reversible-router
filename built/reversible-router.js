@@ -1,0 +1,5 @@
+//     reversible-router
+//     (c) simonfan
+//     reversible-router is licensed under the MIT terms.
+
+define("reversible-router",["require","exports","module","lodash","lowercase-backbone"],function(t,e,r){function n(t){return t.replace(/(\(|\(.*:|:|\)|\*)/,"")}function i(t,e){return t=t.replace(s,function(t){var r=n(t);return e[r]?e[r]:t}),t=t.replace(c,function(t){var r=n(t);return e[r]?e[r]:""}),t.replace(u,"")}{var o=t("lodash"),a=t("lowercase-backbone").router,u=/\((.*?)\)/g,s=/(\(\?)?:\w+/g,c=/\*\w+/g;r.exports=a.extend({initialize:function(){this.initializeArchRouter.apply(this,arguments)},initializeArchRouter:function(){this.routeFormats={}},route:function(t,e){return o.isString(e)&&(this.routeFormats[e]=t),a.prototype.route.apply(this,arguments)},navigate:function(t,e,r){var n=this.routeFormats[t];if(n){var o=i(n,e);return a.prototype.navigate.call(this,o,r)}return a.prototype.navigate.apply(this,arguments)}})}});

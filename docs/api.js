@@ -2,12 +2,12 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [],
     "modules": [
-        "archetypo-router"
+        "reversible-router"
     ],
     "allModules": [
         {
-            "displayName": "archetypo-router",
-            "name": "archetypo-router"
+            "displayName": "reversible-router",
+            "name": "reversible-router"
         }
     ]
 } };

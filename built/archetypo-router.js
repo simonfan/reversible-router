@@ -1,5 +1,0 @@
-//     ArchetypoRouter
-//     (c) simonfan
-//     ArchetypoRouter is licensed under the MIT terms.
-
-define("archetypo-router",["require","exports","module","lodash","lowercase-backbone"],function(t,r,e){function n(t){return t.replace(/(\(|\(.*:|:|\)|\*)/,"")}function i(t,r){return t=t.replace(c,function(t){var e=n(t);return r[e]?r[e]:t}),t=t.replace(s,function(t){var e=n(t);return r[e]?r[e]:""}),t.replace(u,"")}{var o=t("lodash"),a=t("lowercase-backbone").router,u=/\((.*?)\)/g,c=/(\(\?)?:\w+/g,s=/\*\w+/g;e.exports=a.extend({initialize:function(){this.initializeArchRouter.apply(this,arguments)},initializeArchRouter:function(){this.routeFormats={}},route:function(t,r){return o.isString(r)&&(this.routeFormats[r]=t),a.prototype.route.apply(this,arguments)},navigate:function(t,r,e){var n=this.routeFormats[t];if(n){var o=i(n,r);return a.prototype.navigate.call(this,o,e)}return a.prototype.navigate.apply(this,arguments)}})}});

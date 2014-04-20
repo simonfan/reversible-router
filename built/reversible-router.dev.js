@@ -1,12 +1,12 @@
-//     ArchetypoRouter
+//     reversible-router
 //     (c) simonfan
-//     ArchetypoRouter is licensed under the MIT terms.
+//     reversible-router is licensed under the MIT terms.
 
 /**
- * @module archetypo-router
+ * @module reversible-router
  */
 
-define('archetypo-router',['require','exports','module','lodash','lowercase-backbone'],function (require, exports, module) {
+define('reversible-router',['require','exports','module','lodash','lowercase-backbone'],function (require, exports, module) {
 	
 
 	var _ = require('lodash'),

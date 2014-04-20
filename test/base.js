@@ -4,7 +4,7 @@
 		// node
 		'.././src' :
 		// browser
-		'archetypo-router',
+		'reversible-router',
 		// dependencies for the test
 		deps = [mod, 'should'];
 
